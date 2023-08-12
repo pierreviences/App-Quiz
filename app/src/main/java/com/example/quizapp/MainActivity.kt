@@ -44,6 +44,32 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-   
+    // step 4 -> correctButtonColors() method
+    private fun correctButtonColors(buttonIndex: Int){
+        when(buttonIndex){
+            0 -> binding.option1Button.setBackgroundColor(Color.GREEN)
+            1 -> binding.option2Button.setBackgroundColor(Color.GREEN)
+            2 -> binding.option3Button.setBackgroundColor(Color.GREEN)
+        }
+    }
+
+    // step 5 -> wrongButtonColors() method
+    private fun wrongButtonColors(buttonIndex: Int) {
+        when(buttonIndex){
+            0 -> binding.option1Button.setBackgroundColor(Color.RED)
+            1 -> binding.option2Button.setBackgroundColor(Color.RED)
+            2 -> binding.option3Button.setBackgroundColor(Color.RED)
+        }
+
+    }
+
+    // step 6 -> resetButtonColors() method
+    private fun resetButtonColors(){
+        binding.option1Button.setBackgroundColor(Color.rgb(50,90,96))
+        binding.option2Button.setBackgroundColor(Color.rgb(50,90,96))
+        binding.option3Button.setBackgroundColor(Color.rgb(50,90,96))
+    }
+
+    
 
 }
