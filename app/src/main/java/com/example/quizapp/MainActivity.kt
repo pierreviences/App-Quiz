@@ -103,6 +103,12 @@ class MainActivity : AppCompatActivity() {
             showResults()
         }
     }
-    
+    // step 10 -> restartQuiz()
+    private fun restartQuiz(){
+        currecntQuestionIndex = 0
+        score = 0
+        displayQuestion()
+        binding.restartButton.isEnabled = false
+    }
 
 }
