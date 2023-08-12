@@ -40,7 +40,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // step 11 -> call displayQuestion()
+        displayQuestion()
 
+       
 
     }
 
