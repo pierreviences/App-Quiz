@@ -43,7 +43,19 @@ class MainActivity : AppCompatActivity() {
         // step 11 -> call displayQuestion()
         displayQuestion()
 
-       
+        // step 12 -> call method inside setOnClickListener
+        binding.option1Button.setOnClickListener {
+            checkAnswer(0)
+        }
+        binding.option2Button.setOnClickListener {
+            checkAnswer(1)
+        }
+        binding.option3Button.setOnClickListener {
+            checkAnswer(2)
+        }
+        binding.restartButton.setOnClickListener {
+            restartQuiz()
+        }
 
     }
 
