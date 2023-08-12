@@ -86,5 +86,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-   
+    // step 9 -> checkAnswer()
+    private fun checkAnswer(selectedAnswerIndex: Int){
+        val correctAnswerIndex = correctAnswer[currecntQuestionIndex]
+        if(selectedAnswerIndex == correctAnswerIndex){
+            score++
+            correctButtonColors(selectedAnswerIndex)
+        }else {
+            wrongButtonColors(selectedAnswerIndex)
+            correctButtonColors(selectedAnswerIndex)
+        }
+        if(currecntQuestionIndex < questions.size - 1){
+            currecntQuestionIndex++
+            binding.questionText.postDelayed({displayQuestion()}, 1000)
+        }else{
+            showResults()
+        }
+    }
+    
+
 }
