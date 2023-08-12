@@ -76,6 +76,15 @@ class MainActivity : AppCompatActivity() {
         binding.restartButton.isEnabled = true
     }
 
- 
+    // step 8 -> displayQuestion()
+    private fun displayQuestion(){
+        binding.questionText.text = questions[currecntQuestionIndex]
+        binding.option1Button.text = options[currecntQuestionIndex][0]
+        binding.option2Button.text = options[currecntQuestionIndex][1]
+        binding.option3Button.text = options[currecntQuestionIndex][2]
+        resetButtonColors()
 
+    }
+
+   
 }
