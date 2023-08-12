@@ -70,6 +70,12 @@ class MainActivity : AppCompatActivity() {
         binding.option3Button.setBackgroundColor(Color.rgb(50,90,96))
     }
 
-    
+    // step 7 -> showResult()
+    private fun showResults(){
+        Toast.makeText(this, "Your Score : $score out of ${questions.size}", Toast.LENGTH_SHORT).show()
+        binding.restartButton.isEnabled = true
+    }
+
+ 
 
 }
